@@ -78,7 +78,7 @@ export function Services() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent leading-tight">
             Dịch vụ
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-400 text-2xl max-w-2xl mx-auto leading-relaxed">
             Giải pháp âm nhạc toàn diện cho mọi dự án
           </p>
         </motion.div>
@@ -125,7 +125,7 @@ export function Services() {
                   {service.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-3 text-gray-300">
                       <div className="w-1.5 h-1.5 rounded-full bg-purple-400 flex-shrink-0" />
-                      <span className="text-sm leading-relaxed">{feature}</span>
+                      <span className="text-song-desc leading-relaxed">{feature}</span>
                     </li>
                   ))}
                 </ul>

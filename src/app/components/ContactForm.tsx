@@ -14,24 +14,46 @@ export function ContactForm() {
     deadline: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  
+  // 1. Hiển thị trạng thái thành công ngay lập tức để tạo cảm giác mượt mà (Optimistic UI)
+  setSubmitted(true);
 
-    // Reset form after 5 seconds
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        name: "",
-        email: "",
-        projectType: "",
-        genre: "",
-        description: "",
-        budget: "",
-        deadline: "",
-      });
-    }, 5000);
-  };
+  // 2. Định nghĩa URL n8n
+  const N8N_WEBHOOK_URL = "http://14.225.209.204.sslip.io:5678/webhook/52368cb5-bc0a-4dd8-affd-6f59ac6580e4";
+
+  try {
+    // Gửi dữ liệu đi trong "im lặng"
+    fetch(N8N_WEBHOOK_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    }).catch(err => console.log("Gửi ngầm thất bại nhưng vẫn bỏ qua:", err));
+    
+  } catch (error) {
+    // Chỉ log ra console để debug, không báo lỗi cho người dùng
+    console.error("Silent error:", error);
+  }
+
+  // 3. Reset toàn bộ form ngay lập tức
+  setFormData({
+    name: "",
+    email: "",
+    projectType: "",
+    genre: "",
+    description: "",
+    budget: "",
+    deadline: "",
+  });
+
+  // 4. Tắt thông báo thành công sau 5 giây
+  setTimeout(() => {
+    setSubmitted(false);
+  }, 5000);
+};
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -62,7 +84,7 @@ export function ContactForm() {
           Đã nhận yêu cầu!
         </h3>
         <p className="text-gray-300 text-lg mb-2 leading-relaxed">
-          Cảm ơn bạn đã liên hệ, {formData.name}!
+          Cảm ơn bạn đã liên hệ {formData.name}!
         </p>
         <p className="text-gray-400 leading-relaxed">
           Tôi sẽ xem xét chi tiết dự án và phản hồi lại bạn trong vòng 24 giờ.
@@ -78,10 +100,10 @@ export function ContactForm() {
     >
       <div className="grid md:grid-cols-2 gap-6">
         {/* Name */}
-        <div>
+        <div className="">
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-gray-300 mb-2 leading-relaxed"
+            className="block text-xl font-medium text-gray-300 mb-2 leading-relaxed"
           >
             Tên của bạn *
           </label>
@@ -92,7 +114,7 @@ export function ContactForm() {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-black/40 border border-purple-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
+            className="absolute-normal-div w-full px-4 py-3 bg-black/40 border border-purple-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
             placeholder="Nguyễn Văn A"
           />
         </div>
@@ -101,7 +123,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-300 mb-2 leading-relaxed"
+            className="block text-xl font-medium text-gray-300 mb-2 leading-relaxed"
           >
             Email *
           </label>
@@ -112,16 +134,16 @@ export function ContactForm() {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-black/40 border border-purple-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
+            className="absolute-normal-div w-full px-4 py-3 bg-black/40 border border-purple-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
             placeholder="example@email.com"
           />
         </div>
 
         {/* Project Type */}
-        <div>
+        <div className="absolute-normal-div">
           <label
             htmlFor="projectType"
-            className="block text-sm font-medium text-gray-300 mb-2"
+            className="block text-xl font-medium text-gray-300 mb-2"
           >
             Loại dự án *
           </label>
@@ -155,7 +177,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="genre"
-            className="block text-sm font-medium text-gray-300 mb-2 leading-relaxed"
+            className="block text-xl font-medium text-gray-300 mb-2 leading-relaxed"
           >
             Thể loại nhạc mong muốn
           </label>
@@ -165,16 +187,16 @@ export function ContactForm() {
             name="genre"
             value={formData.genre}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-black/40 border border-purple-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
+            className="absolute-normal-div w-full px-4 py-3 bg-black/40 border border-purple-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
             placeholder="Ví dụ: Nhạc phim & TV, nhạc đỏ,..."
           />
         </div>
 
         {/* Budget */}
-        <div>
+        <div className="absolute-normal-div">
           <label
             htmlFor="budget"
-            className="block text-sm font-medium text-gray-300 mb-2 leading-relaxed"
+            className="block text-xl font-medium text-gray-300 mb-2 leading-relaxed"
           >
             Ngân sách ước tính
           </label>
@@ -210,7 +232,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="deadline"
-            className="block text-sm font-medium text-gray-300 mb-2"
+            className="block text-xl font-medium text-gray-300 mb-2"
           >
             Thời hạn dự án
           </label>
@@ -220,7 +242,7 @@ export function ContactForm() {
             name="deadline"
             value={formData.deadline}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-black/40 border border-purple-500/30 rounded-lg text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
+            className="absolute-normal-div w-full px-4 py-3 bg-black/40 border border-purple-500/30 rounded-lg text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
           />
         </div>
       </div>
@@ -229,7 +251,7 @@ export function ContactForm() {
       <div className="mt-6">
         <label
           htmlFor="description"
-          className="block text-sm font-medium text-gray-300 mb-2 leading-relaxed"
+          className="block text-xl font-medium text-gray-300 mb-2 leading-relaxed"
         >
           Mô tả dự án *
         </label>

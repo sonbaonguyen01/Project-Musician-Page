@@ -32,7 +32,7 @@ export function About() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent leading-tight">
             Về nhạc sĩ
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-400 text-2xl max-w-2xl mx-auto leading-relaxed">
             Từ trải nghiệm chân thật đến giai điệu chạm trái tim
           </p>
         </motion.div>
@@ -57,7 +57,7 @@ export function About() {
               <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">
                 {stat.value}
               </div>
-              <div className="text-sm text-gray-400">{stat.label}</div>
+              <div className="text-md text-gray-400">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
@@ -72,17 +72,17 @@ export function About() {
             className="space-y-6"
           >
             <div className="bg-gradient-to-br from-purple-950/30 to-blue-950/30 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
+              <h3 className="text-3xl font-bold text-white mb-4 leading-tight">
                 Câu chuyện của tôi
               </h3>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
-                  Với hơn 30 năm hoạt động nghệ thuật và gắn bó cùng âm nhạc truyền
-                  thống Việt Nam, tôi sáng tác những giai điệu mang đậm linh hồn
-                  quê hương, từ nhạc đỏ, trữ tình đến những ca khúc thiếu nhi.
-                  Mỗi tác phẩm đều được nuôi dưỡng từ trải nghiệm đời sống chân
-                  thực kết hợp cùng tâm hồn đồng điệu của một người say mê âm
-                  nhạc.
+                  Với hơn 30 năm hoạt động nghệ thuật và gắn bó cùng âm nhạc
+                  truyền thống Việt Nam, tôi sáng tác những giai điệu mang đậm
+                  linh hồn quê hương, từ nhạc đỏ, trữ tình đến những ca khúc
+                  thiếu nhi. Mỗi tác phẩm đều được nuôi dưỡng từ trải nghiệm đời
+                  sống chân thực kết hợp cùng tâm hồn đồng điệu của một người
+                  say mê âm nhạc.
                 </p>
 
                 <p>
@@ -94,7 +94,7 @@ export function About() {
             </div>
 
             <div className="bg-gradient-to-br from-purple-950/30 to-blue-950/30 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
+              <h3 className="text-3xl font-bold text-white mb-4 leading-tight">
                 Phương pháp sáng tạo
               </h3>
               <p className="text-gray-300 leading-relaxed">
@@ -123,7 +123,7 @@ export function About() {
             className="space-y-6"
           >
             <div className="bg-gradient-to-br from-purple-950/30 to-blue-950/30 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-6 leading-tight">
+              <h3 className="text-3xl font-bold text-white mb-6 leading-tight">
                 Thể loại nhạc & Chuyên môn
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -153,7 +153,7 @@ export function About() {
                           }`}
                         />
                       </div>
-                      <span className="text-gray-300 text-sm font-medium leading-relaxed">
+                      <span className="text-gray-300 text-md font-medium leading-relaxed">
                         {spec.label}
                       </span>
                     </motion.div>
@@ -163,17 +163,20 @@ export function About() {
             </div>
 
             <div className="bg-gradient-to-br from-purple-950/30 to-blue-950/30 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
+              <h3 className="text-3xl font-bold text-white mb-4 leading-tight">
                 Kinh nghiệm & Thành tích
               </h3>
               <ul className="space-y-3">
                 {[
-                  "Sáng tác nhạc cho hơn 50 phim độc lập và phim tài liệu",
-                  "Âm nhạc xuất hiện trong quảng cáo Super Bowl",
-                  "Sáng tác cho các tựa game AAA",
-                  "Đoạt giải BMI Film & TV Award (2024)",
-                  "Tốt nghiệp Berklee College of Music - Chuyên ngành Film Scoring",
-                  "Thường xuyên đóng góp cho thư viện nhạc sản xuất",
+                  "Sáng tác được hơn 500 ca khúc các loại",
+                  "Sáng tác sở trường nhạc đỏ, nhạc truyền thống cho các đơn vị quân đội và công an - hơn 100 ca khúc",
+                  "Sáng tác hơn 100 ca khúc cho các trường học phổ thông, mầm non",
+                  "Sáng tác hơn 200 ca khúc cho các địa phương trong cả nước",
+                  "Sáng tác hơn 100 ca khúc về thiếu nhi",
+                  "Đã có hơn 20 ca khúc được giới thiệu trên đài phát thanh, truyền hình trung ương và địa phương",
+                  "Đã có 05 ca khúc đạt giải huy chương vàng, bạc trong liên hoan nghệ thuật quần chúng trong và ngoài quân đội",
+                  "Đã có kinh nghiệm hơn 20 năm trong viết lời, bình, đọc lời bình cho các chương trình nghệ thuật",
+                  "Đã đạt 04 huy chương vàng, bạc trong hội diễn nghệ thuật quần chúng toàn quân",
                 ].map((achievement, index) => (
                   <motion.li
                     key={index}

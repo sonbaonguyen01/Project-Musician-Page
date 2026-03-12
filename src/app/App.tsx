@@ -33,7 +33,7 @@ function App() {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent leading-tight">
               Bắt đầu dự án của bạn
             </h2>
-            <p className="text-gray-400 text-lg leading-relaxed">
+            <p className="text-gray-400 text-2xl leading-relaxed">
               Cùng nhau tạo nên những giai điệu tuyệt vời!
             </p>
           </div>

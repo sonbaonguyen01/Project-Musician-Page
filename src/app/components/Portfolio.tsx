@@ -148,8 +148,8 @@ export function Portfolio() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent leading-tight">
             Tác phẩm tiêu biểu
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
-            Tổng hợp các dự án tiêu biểu với nhiều phong cách và thể loại đa dạng
+          <p className="text-gray-400 text-2xl max-w-xl mx-auto leading-relaxed">
+            Tổng hợp các dự án tiêu biểu với nhiều phong cách <br></br>và thể loại đa dạng
           </p>
         </motion.div>
 
@@ -200,13 +200,13 @@ export function Portfolio() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-white mb-2 leading-tight">
+                  <h3 className="text-song-title font-bold text-white mb-2 leading-tight">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-purple-400 mb-3 leading-relaxed">
+                  <p className="text-song-genre text-purple-400 mb-3 leading-relaxed">
                     {project.category}
                   </p>
-                  <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                  <p className="text-gray-400 text-song-desc mb-6 leading-relaxed">
                     {project.description}
                   </p>
 

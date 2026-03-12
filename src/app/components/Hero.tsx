@@ -53,8 +53,8 @@ export function Hero({ onScrollToDemo, onScrollToContact }: HeroProps) {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/30 mb-6"
             >
               <Music2 className="w-4 h-4 text-purple-400" />
-              <span className="text-sm text-purple-300 leading-tight">
-                Nhà thiết kế âm thanh đoạt nhiều giải thưởng danh giá
+              <span className="text-xl text-purple-300 leading-tight">
+                Nhà sản xuất âm thanh đoạt nhiều giải thưởng danh giá
               </span>
             </motion.div>
 
@@ -73,17 +73,9 @@ export function Hero({ onScrollToDemo, onScrollToContact }: HeroProps) {
               transition={{ delay: 0.4 }}
               className="text-xl md:text-2xl text-gray-300 mb-8 leading-snug"
             >
-              Nhà soạn nhạc & Nhà sản xuất âm nhạc tự do
+              Nhà soạn nhạc và sản xuất âm nhạc tự do
             </motion.p>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="text-lg text-gray-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
-            >
-              Hồn quê trong từng giai điệu.
-            </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -96,7 +88,7 @@ export function Hero({ onScrollToDemo, onScrollToContact }: HeroProps) {
                 className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-medium overflow-hidden transition-all hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2 leading-tight">
-                  <Play className="w-5 h-5" />
+                  <Play className="text-xl w-5 h-5" />
                   Nghe demo
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -104,7 +96,7 @@ export function Hero({ onScrollToDemo, onScrollToContact }: HeroProps) {
 
               <button
                 onClick={onScrollToContact}
-                className="px-8 py-4 bg-white/5 backdrop-blur-sm text-white border border-white/20 rounded-lg font-medium hover:bg-white/10 hover:border-white/30 transition-all hover:scale-105 leading-tight"
+                className="text-xl px-8 py-4 bg-white/5 backdrop-blur-sm text-white border border-white/20 rounded-lg font-medium hover:bg-white/10 hover:border-white/30 transition-all hover:scale-105 leading-tight"
               >
                 Bắt đầu dự án
               </button>

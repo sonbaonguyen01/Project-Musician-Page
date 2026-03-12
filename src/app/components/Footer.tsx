@@ -3,7 +3,7 @@ import { Music2, Mail, Facebook, Youtube, Phone, Linkedin } from "lucide-react";
 
 export function Footer() {
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Facebook, href: "https://www.facebook.com/nguyen.baquoc.58", label: "Facebook" },
     { icon: Youtube, href: "https://youtube.com/@nguyenbaquoc-nhacsyquanchu5502?si=EHzKFYoOl5KWIg3i", label: "YouTube" },
   ];
 
@@ -17,33 +17,33 @@ export function Footer() {
               <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
                 <Music2 className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-white leading-tight">Nguyễn Bá Quốc</span>
+              <span className="text-2xl font-bold text-white leading-tight">Nguyễn Bá Quốc</span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-xl text-gray-400 text-sm leading-relaxed">
               Nhà soạn nhạc & Nhà sản xuất âm nhạc tự do
             </p>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Liên hệ</h3>
+            <h3 className="text-2xl font-semibold text-white mb-4">Liên hệ</h3>
             <a href="#" className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors">
               <Phone className="w-4 h-4" />
               0983055075
             </a>
             <a
-              href="mailto:contact@alexrivers.com"
+              href="mailto:nguyenbaquoc72@gmail.com"
               className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors"
             >
               <Mail className="w-4 h-4" />
-              contact@alexrivers.com
+              nguyenbaquoc72@gmail.com
             </a>
             
           </div>
 
           {/* Social Media */}
           <div>
-            <h3 className="font-semibold text-white mb-4 leading-tight">Theo dõi tôi</h3>
+            <h3 className="text-2xl font-semibold text-white mb-4 leading-tight">Theo dõi tôi</h3>
             <div className="flex gap-3">
               {socialLinks.map((link) => {
                 const Icon = link.icon;
@@ -56,7 +56,7 @@ export function Footer() {
                     whileTap={{ scale: 0.95 }}
                     className="w-10 h-10 bg-purple-950/40 border border-purple-500/30 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 hover:border-purple-500/50 transition-colors"
                   >
-                    <Icon className="w-5 h-5" />
+                    <Icon className="w-6 h-6" />
                   </motion.a>
                 );
               })}
@@ -65,7 +65,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-purple-500/20 text-center text-gray-500 text-sm">
+        <div className="pt-8 border-t border-purple-500/20 text-center text-gray-500 text-base">
           <p className="leading-relaxed">
             © {new Date().getFullYear()} Nguyễn Bá Quốc. All Rights Reserved.
           </p>
