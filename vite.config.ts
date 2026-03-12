@@ -10,6 +10,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: '/Project-Musician-Page/', // QUAN TRỌNG: Phải có dấu gạch chéo ở đầu và cuối
   resolve: {
     alias: {
       // Alias @ to the src directory
