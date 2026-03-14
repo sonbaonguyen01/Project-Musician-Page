@@ -21,7 +21,7 @@ export function ContactForm() {
   setSubmitted(true);
 
   // 2. Định nghĩa URL n8n
-  const N8N_WEBHOOK_URL = "http://14.225.209.204.sslip.io:5678/webhook/52368cb5-bc0a-4dd8-affd-6f59ac6580e4";
+const N8N_WEBHOOK_URL = "https://14.225.209.204.sslip.io/webhook/52368cb5-bc0a-4dd8-affd-6f59ac6580e4";
 
   try {
     // Gửi dữ liệu đi trong "im lặng"
