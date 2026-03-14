@@ -27,7 +27,7 @@ export function Portfolio() {
       duration: "4:09",
       icon: Film,
       color: "purple",
-      audio: "/audio/four-season.mp3",
+      audio: "./audio/four-season.mp3",
     },
     {
       id: 2,
@@ -38,7 +38,7 @@ export function Portfolio() {
       duration: "4:06",
       icon: Music,
       color: "blue",
-      audio: "/audio/doaiphuong.mp3",
+      audio: "./audio/doaiphuong.mp3",
     },
     {
       id: 3,
@@ -49,7 +49,7 @@ export function Portfolio() {
       duration: "5:31",
       icon: Music,
       color: "purple",
-      audio: "/audio/guiem.mp3",
+      audio: "./audio/guiem.mp3",
     },
     {
       id: 4,
@@ -60,7 +60,7 @@ export function Portfolio() {
       duration: "3:10",
       icon: Tv,
       color: "blue",
-      audio: "/audio/hongphong.mp3",
+      audio: "./audio/hongphong.mp3",
     },
     {
       id: 5,
@@ -71,7 +71,7 @@ export function Portfolio() {
       duration: "3:46",
       icon: Music,
       color: "purple",
-      audio: "/audio/thaygiaoqd.mp3",
+      audio: "./audio/thaygiaoqd.mp3",
     },
     {
       id: 6,
@@ -82,7 +82,7 @@ export function Portfolio() {
       duration: "4:15",
       icon: Music,
       color: "blue",
-      audio: "/audio/trangan.mp3",
+      audio: "./audio/trangan.mp3",
     },
   ];
 
