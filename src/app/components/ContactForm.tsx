@@ -158,16 +158,16 @@ const N8N_WEBHOOK_URL = "https://14.225.209.204.sslip.io/webhook/52368cb5-bc0a-4
             <option value="" className="bg-gray-900">
               Chọn loại dự án
             </option>
-            <option value="film" className="bg-gray-900">
+            <option value="Sáng tác nhạc theo yêu cầu" className="bg-gray-900">
               Sáng tác nhạc theo yêu cầu
             </option>
-            <option value="commercial" className="bg-gray-900">
+            <option value="Sản xuất & phối khí" className="bg-gray-900">
               Sản xuất & Phối khí
             </option>
-            <option value="podcast" className="bg-gray-900">
+            <option value="Ký âm & Dạy hát mẫu theo yêu cầu" className="bg-gray-900">
               Ký âm & Dạy hát mẫu theo yêu cầu
             </option>
-            <option value="other" className="bg-gray-900">
+            <option value="Tùy chọn" className="bg-gray-900">
               Khác
             </option>
           </select>
